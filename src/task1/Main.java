@@ -40,7 +40,7 @@ class Main {
 		job.setReducer(FlightCountReducer.class);
 
 		BufferedReader input = new BufferedReader(new FileReader("AComp_Passenger_data.csv"));
-		BufferedWriter output = new BufferedWriter(new FileWriter("task1_flightcount.txt", true));
+		BufferedWriter output = new BufferedWriter(new FileWriter("task1_flightcount_bis.txt", true));
 		job.setInput(input);
 		job.setOutput(output);
 
@@ -54,7 +54,7 @@ class Main {
 		job.setMapper(TotalMapper.class);
 		job.setReducer(TotalReducer.class);
 
-		BufferedReader input = new BufferedReader(new FileReader("task1_flightcount.txt"));
+		BufferedReader input = new BufferedReader(new FileReader("task1_flightcount_bis.txt"));
 		BufferedWriter output = new BufferedWriter(new FileWriter("task1_flightcount_final.txt"));
 		job.setInput(input);
 		job.setOutput(output);
